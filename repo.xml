@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta xmlns="http://exist-db.org/xquery/repo">
+    <description>Curious Editor</description>
+    <author/>
+    <website/>
+    <status>beta</status>
+    <license>GNU-LGPL</license>
+    <copyright>true</copyright>
+    <type>application</type>
+    <target>app-ct-ed</target>
+    <prepare>pre-install.xql</prepare>
+    <finish/>
+
+
+
+
+
+<deployed>2020-03-16T13:33:50.572Z</deployed></meta>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Curious Books</title>
+        
+        <style>
+* {
+  box-sizing: border-box;
+}
+
+#inputBooks1, #inputBooks2, #inputBooks3, #inputBooks4, #inputBooks5 {
+#  background-image: url('../resources/img/searchicon.png');
+#  background-size: 15px;
+#  background-position: 10px 10px;
+#  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 0px 0px 0px 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+
+#books {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#books th, #books td {
+  text-align: left;
+  padding: 12px;
+}
+
+#books tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#books tr.header, #books tr:hover {
+  background-color: #a1aa8d;
+}
+</style>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>    
+        <script src="$app-root/resources/js/searchbooks_ed.js"/>
+        
+    </head>
+    <body>
+        <div class="templates:surround?with=templates/page.html&amp;at=content">
+            <h1 style="text-align:center;">Curious Books <br/>
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"/> not linked</h1>
+            <br/>
+            <br/>
+            <a href="#" class="back-to-top">
+                <i class="fa fa-chevron-up fa-lgq"/>
+            </a>
+            <table id="books" class="display table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th class="col-md-1">ID<br/>
+                            <input type="text" id="inputBooks1" onkeyup="searchID()" title="Type in a ID"/>
+                        </th>
+                        <th class="col-md-6">Title<br/>
+                            <input type="text" id="inputBooks2" autofocus="autofocus" onkeyup="searchTitle()" title="Type in a title"/>
+                        </th>
+                        <th class="col-md-2">Surname<br/>
+                            <input type="text" id="inputBooks3" onkeyup="searchaSurname()" title="Type in a surname"/>
+                        </th>
+                        <th class="col-md-2">Forename<br/>
+                            <input type="text" id="inputBooks4" onkeyup="searchaForename()" title="Type in a forename"/>
+                        </th>
+                        <th class="col-md-1">Year<br/>
+                            <input type="text" id="inputBooks5" onkeyup="searchDate()" title="Type in a date"/>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody data-template="app:booksCheck"/>
+            </table>
+        </div>
+    </body>
+</html>

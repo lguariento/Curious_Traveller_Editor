@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="container" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+<div class="container">
+    
+    <form action="placeadded.html" target="placeadded" method="POST">  
+        <h1 style="text-align:center;">Add a curious place</h1>
+        <div class="form-group col-md-3">
+            
+            <label for="placename">Place name:</label>
+            <input class="form-control" type="text" name="placename" placeholder="placename"/>
+            <br/>
+            <input type="hidden" name="count" value="1"/>
+            <!--		<input type="hidden" name="id_gap" value="{$id_gap}" /> --> 
+            
+            <label for="pladdname">Variants:</label>
+            
+            <div class="input-append">
+                <input class="form-control" id="field1" ref="1" name="pladdname" type="text" placeholder="variant"/>
+            </div>
+            <button type="button" class="btn btn-default add-more">Add
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"/>
+                </button>
+            <button type="button" class="btn btn-default remove">Remove
+                <span class="glyphicon glyphicon-minus" aria-hidden="true"/>
+                </button>
+            <br/>
+            
+            <label for="geo">Coordinates:</label>
+            <input class="form-control" type="text" name="geo" placeholder="coordinates"/>
+            <br/>
+        </div>
+        <div class="col-md-9">
+            <br/>
+            <iframe scrolling="no" style="border: none; width:100%; height: 350px;" name="placeadded"/>
+        </div>
+        <div class="form-group col-md-12">
+            <label for="note">Note:</label>
+                <br/>
+            <textarea type="text" name="placenote" placeholder="note" style="height: 100px; width: 100%;"/>
+            <br/>
+            <br/>
+            <input class="btn btn-primary btn-lg" type="submit" onclick="disable()" value="Submit"/>
+            <button class="btn btn-danger pull-right" type="reset" disabled="disabled" value="Reset">Reset</button>
+            
+            <a href="places.html" class="btn btn-success pull-right" style="margin-right: 20px;">Back to list</a>
+        </div>
+        
+        <br/>
+        
+    </form>
+    
+</div>
+</div>

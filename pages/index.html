@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <div id="banner">
+        <br/>
+        <br/>
+        <img class="img-responsive img-rounded center-block" src="$app-root/resources/img/banner.jpg"/>
+    </div>
+    <div class="container-fluid">
+        
+        <div style="text-align:center; background-color:#f4edd8;" class="jumbotron">
+
+        <h2>Welcome to the Curious Editor!</h2>
+        <p>What do you want to work on today?</p>
+            <br/>
+            <a style="width: 15%; margin-right: 5%;" href="persons.html" class="btn btn-primary btn-lg">
+                <br/>
+                <span class="glyphicon glyphicon-user" aria-hidden="true"/>
+                <br/>Persons<br/>
+                <div style="font-size:small;">
+                [<span data-template="app:countPersons"/>]
+                </div>
+                <br/>
+            </a>
+            <a style="width: 15%; margin-right: 5%;" href="places.html" class="btn btn-warning btn-lg">
+                <br/>
+                <span class="glyphicon glyphicon-flag" aria-hidden="true"/>
+                <br/>Places<br/>
+                <div style="font-size:small;">
+                [<span data-template="app:countPlaces"/>]
+                </div>
+                <br/>
+            </a>
+            <a style="width: 15%; margin-right: 5%;" href="books.html" class="btn btn-danger btn-lg">
+                <br/>
+                <span class="glyphicon glyphicon-book" aria-hidden="true"/>
+                <br/>Books<br/>
+                <div style="font-size:small;">
+                [<span data-template="app:countBooks"/>]
+                </div>
+                <br/>
+            </a>
+            <a style="width: 15%;" href="artworks.html" class="btn btn-success btn-lg">
+                <br/>
+                <span class="glyphicon glyphicon-picture" aria-hidden="true"/>
+                <br/>Artworks<br/>
+                <div style="font-size:small;">
+                [<span data-template="app:countArtworks"/>]
+                </div>
+                <br/>
+            </a>
+            
+<br/>
+            <br/>
+            <div class="well well-sm" style="max-width: 80%; margin: auto;">
+            <h4>Check which records are not yet linked to any document</h4>
+            <h5>The pages can take up to a minute or two to load, depending on the number of items the system has to check through.
+            <br/>Please be patient and click the buttons only once.</h5>
+        <div>
+            
+            <a style="font-size: medium;width: 15%; margin-right: 5%;" href="perscheck.html" class="btn btn-primary btn-lg">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"/>
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"/>
+                <br/>Persons<br/>
+            </a>
+            <a style="font-size: medium;width: 15%; margin-right: 5%;" href="placescheck.html" class="btn btn-warning btn-lg">
+                <span class="glyphicon glyphicon-flag" aria-hidden="true"/>
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"/>
+                <br/>Places<br/>
+            </a>
+            <a style="font-size: medium;width: 15%; margin-right: 5%;" href="bookscheck.html" class="btn btn-danger btn-lg">
+                <span class="glyphicon glyphicon-book" aria-hidden="true"/>
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"/>
+                <br/>Books<br/>
+            </a>
+            <a style="font-size: medium;width: 15%;" href="artworkscheck.html" class="btn btn-success btn-lg">
+
+                <span class="glyphicon glyphicon-picture" aria-hidden="true"/>
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"/>
+                <br/>Artworks<br/>
+
+            </a>
+            
+        </div>
+            </div><!-- well -->
+        </div> 
+    </div>
+</div>

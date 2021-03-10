@@ -1,0 +1,141 @@
+/* Application styles could go here */
+
+footer img { visibility: hidden !important; }
+
+html{
+
+    height:100%;
+}
+
+thead {
+
+    position: sticky;
+    top: 50px;
+    background: #a1aa8d;
+    z-index: 1001;
+    
+}
+
+.copied {
+    
+    text-align: center;
+    background: #f4edd8;
+    box-shadow: 0 0 2px 2px #a1aa8d inset;
+    border-radius: 10px;
+    
+}
+
+.clippy {
+
+    position:relative;
+    top: -2px;
+    margin-left: 8px;
+    width: 14px;
+    opacity: 0.5;
+
+}
+
+.clippy:hover {
+
+    opacity: 1;
+    height: 18px;
+    background: #f4edd8;
+
+}
+
+#navbar {
+    
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    background-color: #f4edd8;
+    opacity: 0.9;
+}
+
+
+html{
+    height:100%;
+}
+
+#content{
+    
+    background-color: #f4edd8;
+/*    min-height: 100%;*/
+    top: 100px; /*Height of header*/
+    z-index: 0;
+/*    margin-bottom: -10px;
+    padding-bottom: 20px;*/
+    box-sizing: border-box;
+}
+
+body{
+
+    min-height: 100%;
+    position: relative;
+    background-color: #a1aa8d;
+    padding-bottom: 6em;
+}
+
+header{
+    background-color:#333; /*#F8F8F8*/
+    color:#ffffff;
+}
+
+footer{
+
+    background-color: #f4edd8;
+    color:#ffffff;
+    font-size:13px;
+/*    padding:20px;*/
+    left:0;
+    right:0;
+    width:100%;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0px;
+/*    height: 6em;*/
+}
+
+
+/* Table search  */
+
+tfoot input {
+
+        padding: 3px;
+        box-sizing: border-box;
+    }
+    
+.center-block{
+    
+        margin-top: 1%;
+}
+
+.opener{
+    
+    margin-left: 2em;
+    
+}
+
+.closer{
+    
+    margin-left: 2em;
+    
+}
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 19em;
+    right: 30px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(235, 235, 235, 0.80);
+    font-size: 13px;
+    padding: 1em;
+    display: none;
+    z-index: 1000;
+}
+
+.back-to-top:hover {    
+    background-color: rgba(135, 135, 135, 0.50);
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="container" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <!--
+    <form action="persadded.html" method="POST">  
+        <h1 style="text-align:center;">Add a person</h1>
+        <div class="form-group col-md-12">
+
+            <label for="newpeid">ID:</label>
+            <input name="idnext" data-template="app:nextID"/>
+            <br/>
+            <label for="surname">Surname:</label>
+            <input class="form-control" type="text" name="surname" placeholder="surname"/>
+            <br/>
+        </div>
+        <br/>
+        <input class="btn btn-primary btn-lg" id="submit" type="submit" value="Submit"/>
+        <br/>
+
+    </form>-->
+    <div class="container">
+        
+        <form action="persadded.html" target="persadded" method="POST">  
+            <h1 style="text-align:center;">Add a curious person</h1>
+            <div class="form-group col-md-3">
+                
+                <label for="surname">Surname:</label>
+                <input class="form-control" type="text" name="surname" placeholder="surname"/>
+                <br/>
+                <label for="forename">Forename:</label>
+                <input class="form-control" type="text" name="forename" placeholder="forename"/>
+                <br/>
+                <label for="rolename">Role name:</label>
+                <select type="text" class="form-control" id="rolename" name="rolename">
+                    <option/>
+                    <option>Archbishop</option>
+                    <option>Admiral</option>
+                    <option>Baron</option>
+                    <option>Bishop</option>
+                    <option>Captain</option>
+                    <option>Colonel</option>
+                    <option>Count</option>
+                    <option>Countess</option>
+                    <option>Dr</option>
+                    <option>Duchess</option>
+                    <option>Duke</option>
+                    <option>Earl</option>
+                    <option>Emperor</option>
+                    <option>Esquire</option>
+                    <option>King</option>
+                    <option>Lady</option>
+                    <option>Lieutenant</option>
+                    <option>Lord</option>
+                    <option>Miss</option>
+                    <option>MP</option>
+                    <option>Mr</option>
+                    <option>Mrs</option>
+                    <option>Prince</option>
+                    <option>Professor</option>
+                    <option>Provost</option>
+                    <option>Queen</option>
+                    <option>Reverend</option>
+                    <option>Sir</option>
+                    <option>Squire</option>
+                </select>
+                <br/>
+                <!-- <label for="addname">Additional name:</label>
+<input class="form-control" type="text" name="addname" placeholder="additional name"/> !-->
+                
+                <input type="hidden" name="count" value="1"/>
+                
+                <label for="addname">Variants:</label>
+                
+                <div class="input-append">
+                    <input class="form-control" id="field1" ref="1" name="addname" type="text" placeholder="variant"/>
+                </div>
+                <button type="button" class="btn btn-default add-more">Add
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"/>
+                </button>
+                <button type="button" class="btn btn-default remove">Remove
+                    <span class="glyphicon glyphicon-minus" aria-hidden="true"/>
+                </button>
+                <br/>
+                
+                <br/>
+            </div>
+            <div class="col-md-9">
+                <br/>
+                <iframe scrolling="no" style="border: none; width:100%; height: 350px;" name="persadded"/>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="note">Note:</label>
+                <br/>
+                <textarea type="text" name="note" placeholder="note" style="height: 100px; width: 100%;"/>
+                <br/>
+                <br/>
+                <input class="btn btn-primary btn-lg" id="submit" type="submit" onclick="disable()" value="Submit"/>
+                <button class="btn btn-danger pull-right" type="reset" value="Reset">Reset</button>
+                
+                <a href="persons.html" class="btn btn-success pull-right" style="margin-right: 20px;">Back to list</a>
+            </div>
+            
+            <br/>
+            
+        </form>
+        
+    </div>
+    
+</div><!--<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <title>Add a curious person</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+        <script type="text/javascript" src="../resources/js/after_submit.js"/>
+        <script type="text/javascript" src="../resources/js/variants_pe.js"/>
+    </head>
+    <body>
+        <div class="templates:surround?with=templates/page.html&at=content">
+
+            <div data-template="app:addPers"/>
+
+        </div>
+    </body>
+</html>-->

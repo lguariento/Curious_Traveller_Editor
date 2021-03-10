@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        
+        <title>Curious Places - not linked</title>
+        
+        <style>
+* {
+  box-sizing: border-box;
+}
+
+#inputPersons1, #inputPersons2, #inputPersons3, #inputPersons4 {
+#  background-image: url('../resources/img/searchicon.png');
+#  background-size: 15px;
+#  background-position: 10px 10px;
+#  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 0px 0px 0px 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+
+#persons {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#persons th, #persons td {
+  text-align: left;
+  padding: 12px;
+}
+
+#persons tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#persons tr.header, #persons tr:hover {
+  background-color: #a1aa8d;
+}
+</style>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+        <script type="text/javascript" src="/resources/js/searchpersons_ed.js"/>
+        
+    </head>
+    <body id="body">
+        <div class="templates:surround?with=templates/page.html&amp;at=content">
+            <h1 style="text-align:center;">Curious Places <br/>
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"/> not linked</h1>
+            <table id="persons" class="display table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th class="col-md-1">ID<br/>
+                            <input type="text" id="inputPersons1" onkeyup="searchID()" title="Type in a ID"/>
+                        </th>
+                        <th class="col-md-1">Surname<br/>
+                            <input type="text" id="inputPersons2" autofocus="autofocus" onkeyup="searchSurname()" title="surname"/>
+                        </th>
+                        <th class="col-md-1">Name<br/>
+                            <input type="text" id="inputPersons3" onkeyup="searchForename()" title="Type in a forename"/>
+                        </th>
+                        <th class="col-md-9">Notes<br/>
+                            <input type="text" id="inputPersons4" onkeyup="searchNotes()" title="Type in a note"/>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody data-template="app:placesCheck"/>
+            </table>
+        </div>
+    </body>
+</html>

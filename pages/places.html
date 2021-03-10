@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Curious Places</title>
+        
+        <style>
+* {
+  box-sizing: border-box;
+}
+
+#inputPlaces1, #inputPlaces2, #inputPlaces3, #inputPlaces4 {
+#  background-image: url('../resources/img/searchicon.png');
+#  background-size: 15px;
+#  background-position: 10px 10px;
+#  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 0px 0px 0px 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+
+#places {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#places th, #places td {
+  text-align: left;
+  padding: 12px;
+}
+
+#places tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#places tr.header, #places tr:hover {
+  background-color: #a1aa8d;
+}
+</style>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+        <script type="text/javascript" src="$app-root/resources/js/searchplaces.js"/>
+        
+    </head>
+    <body>
+        <div class="templates:surround?with=templates/page.html&amp;at=content">
+            <h1 style="text-align:center;">Curious Places</h1>
+            <p>
+                <br/>
+                <br/>
+                <a style="font-size: 18px;" class="btn btn-primary btn-block" href="addnewplace.html">
+                    <span class="glyphicon glyphicon-flag" aria-hidden="true"/> Add a new place
+                </a>
+            </p>
+            <a href="#" class="back-to-top">
+                <i class="fa fa-chevron-up fa-lgq"/>
+            </a>
+            <table id="places" class="display table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th class="col-md-1">ID<br/>
+                            <input type="text" name="nofocus" id="inputPlaces1" onkeyup="searchID()" title="Type in a ID"/>
+                        </th>
+                        <th class="col-md-11" colspan="3">Place name, variant, and notes<br/>
+                            <input type="text" id="inputPlaces2" name="typeautofocus" onkeyup="filterTable()" autofocus="autofocus"/>
+                        </th>
+<!--                        <th class="col-md-4">Note<br/>
+                            <input type="text" id="inputPlaces3" onkeyup="filterTable()"/>
+                        </th>-->
+<!--                        <th class="col-md-6">Variants<br/>
+                            <input type="text" id="inputPlaces3" onkeyup="searchVariant()" title="Type in a variant"/>
+                        </th>-->
+                    </tr>
+                </thead>
+                <tbody data-template="app:listplaceEdit"/>
+            </table>
+        </div>
+    </body>
+</html>

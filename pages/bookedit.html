@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        
+        <title>Edit a book</title>
+<!--        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+        <script type="text/javascript" src="../resources/js/variants_bi.js"/>-->
+        <!--        <script> 
+            
+            $(function(){
+            window.location.reload(true);
+            console.log("reloaded");
+            });
+            
+        </script>-->
+        
+        <!--        <script type="text/javascript">
+            window.addEventListener('load', function (e) {
+                window.applicationCache.addEventListener('updateready', function (e) {
+                    location.reload(true);
+                    }, false);
+                console.log("loaded");
+            }, false);
+        </script>-->
+        
+<!--        <script>
+        /* if my var reload isn't set locally.. in the first time it will be true */
+        if (!localStorage.getItem("reload")) {
+        /* set reload locally and then reload the page */
+        localStorage.setItem("reload", "true");
+        location.reload();
+        console.log("reloaded")
+        }
+        /* after reload clear the localStorage */
+        else {
+        localStorage.removeItem("reload");
+        // localStorage.clear(); // an option
+        }
+        </script>-->
+        
+    </head>
+    <body>
+        <div class="templates:surround?with=templates/page.html&amp;at=content">
+            
+            <div data-template="app:bookEdit"/>
+            
+        </div>
+    </body>
+</html>

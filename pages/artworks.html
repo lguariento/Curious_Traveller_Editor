@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Curious Artworks</title>
+        
+        <style>
+* {
+  box-sizing: border-box;
+}
+
+#inputArtworks1, #inputArtworks2, #inputArtworks3, #inputArtworks4, #inputArtworks5 {
+#  background-image: url('../resources/img/searchicon.png');
+#  background-size: 15px;
+#  background-position: 10px 10px;
+#  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 0px 0px 0px 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+
+#artworks {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#artworks th, #artworks td {
+  text-align: left;
+  padding: 12px;
+}
+
+#artworks tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#artworks tr.header, #artworks tr:hover {
+  background-color: #a1aa8d;
+}
+</style>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+        <script type="text/javascript" src="$app-root/resources/js/searchartworks_ed.js"/>
+        
+    </head>
+    <body>
+        <div class="templates:surround?with=templates/page.html&amp;at=content">
+            <h1 style="text-align:center;">Curious Artworks</h1>
+                <br/>
+                <br/>
+                <a style="font-size: 18px;" class="btn btn-primary btn-block" href="addnewartwork.html">
+                    <span class="glyphicon glyphicon-flag" aria-hidden="true"/> Add a new artwork
+                </a>
+            <a href="#" class="back-to-top">
+                <i class="fa fa-chevron-up fa-lgq"/>
+            </a>
+            <table id="artworks" class="display table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th class="col-md-1">ID<br/>
+                            <input type="text" name="nofocus" id="inputArtworks1" onkeyup="searchID()" title="Type in a ID"/>
+                        </th>
+                        <th class="col-md-8">Artwork name<br/>
+                            <input type="text" id="inputArtworks2" name="typeautofocus" autofocus="autofocus" onkeyup="searchArtwork()" title="Type in an artwork"/>
+                        </th>
+                        <th class="col-md-1">Forename<br/>
+                            <input type="text" name="nofocus" id="inputArtworks3" onkeyup="searchForename()" title="Type in a surname"/>
+                        </th>
+                        <th class="col-md-1">Surname<br/>
+                            <input type="text" name="nofocus" id="inputArtworks4" onkeyup="searchSurname()" title="Type in a forename"/>
+                        </th>
+                        <th class="col-md-1">Date<br/>
+                            <input type="text" name="nofocus" id="inputArtworks5" onkeyup="searchDate()" title="Type in a date"/>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody data-template="app:listartworksEdit"/>
+            </table>
+        </div>
+    </body>
+</html>
